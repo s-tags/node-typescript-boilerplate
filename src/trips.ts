@@ -93,10 +93,13 @@ export const confirmTrip = async (tripId: string) =>
     {},
   );
 
-export const updateTripStatus = async (status: TRIP_STATUS) =>
-  await axios.patch(`${(globalThis as any).__biyahe_sdk__.api}/trips`, {
-    status,
-  });
+export const updateTripStatus = async (tripId: string, status: TRIP_STATUS) =>
+  await axios.patch(
+    `${(globalThis as any).__biyahe_sdk__.api}/trips/${tripId}`,
+    {
+      status,
+    },
+  );
 
 export const cancelTrip = async (tripId: string) =>
   // prettier-ignore

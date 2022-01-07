@@ -3,6 +3,7 @@
 export * from './db';
 export * from './locations';
 export * from './trips';
+export * from './driver';
 
 interface IInitialSdkParameters {
   environment: 'development' | 'staging' | 'production';
